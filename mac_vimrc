@@ -11,11 +11,25 @@ set expandtab smarttab
 set hlsearch
 set foldmethod=indent
 syntax on
+
+" Detect different filetypes
+filetype on
+
 " set backspace
 set backspace=indent,eol,start
+
+" set clipboard to system clipboard to allow proper copying and pasting
+set clipboard=unnamed
+
+" mouse select and copy to vim clipboard
+set mouse=v
+" mouse scrolling
+set mouse=a
+
 " remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
+" set map leader
 let mapleader=','
 " save file in both insert mode and normal mode
 inoremap <leader>w <Esc>:w<cr>
